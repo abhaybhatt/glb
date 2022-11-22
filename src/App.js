@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import Avatar from './avatar';
-import Navbar from "./Navbar";
-import ShowDonut from "./3dmodel";
+import Avatar from './components/avatar';
+import Navbar from "./components/Navbar";
+import ShowDonut from "../src/components/3dmodel";
 import { Routes, Route } from "react-router-dom"
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<>
-          <Navbar />
+          <Navbar x={x} y={y} setX={setX} setY={setY} />
           <div className='mid-section-container'><div className='mid-section'><Avatar x={x} y={y} setX={setX} setY={setY} /></div></div>
           <footer className="footer">Footer</footer></>} />
         <Route path="/avatar" element={<ShowDonut />} />

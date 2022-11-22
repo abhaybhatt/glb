@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import avatar from './assets/avatar.png'
+import avatar from '../assets/avatar.png'
 import { useNavigate } from "react-router-dom";
-import useClickPreventionOnDoubleClick from "./clickHook";
+import useClickPreventionOnDoubleClick from "../doubleclick/clickHook";
 import Draggable, { DraggableCore } from "react-draggable";
-import './App.css';
+import '../App.css';
 
 const ClickableBox = ({ x, y, setX, setY, onClick, onDoubleClick }) => {
     const [handleClick, handleDoubleClick] = useClickPreventionOnDoubleClick(onClick, onDoubleClick);

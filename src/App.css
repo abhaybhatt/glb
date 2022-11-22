@@ -4,6 +4,7 @@
   overflow: hidden;
 }
 
+
 .navbar {
   width: 90%;
   height: 40px;
@@ -12,6 +13,19 @@
   margin-left: 5%;
   background: #D9D9D9;
   border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkboxes input {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  content: "";
+  background: #FFF;
 }
 
 .footer {
