@@ -29,7 +29,9 @@ const Navbar = ({x,y,setX,setY}) => {
             setBottomRight(false)
             setBottomLeft(false)
             setX(0)
+            localStorage.setItem('xPoistion', 0)
             setY(0)
+            localStorage.setItem('yPoistion', 0)
         }
         else if (id === 2) {
             setTopLeft(false)
@@ -37,7 +39,9 @@ const Navbar = ({x,y,setX,setY}) => {
             setBottomRight(false)
             setBottomLeft(false)
             setX(550)
+            localStorage.setItem('xPoistion', 550)
             setY(0)
+            localStorage.setItem('yPoistion', 0)
         }
         else if (id === 3) {
             setTopLeft(false)
@@ -45,14 +49,18 @@ const Navbar = ({x,y,setX,setY}) => {
             setBottomRight(false)
             setBottomLeft(true)
             setX(0)
+            localStorage.setItem('xPoistion', 0)
             setY(400)
+            localStorage.setItem('yPoistion', 400)
         } else if (id === 4) {
             setTopLeft(false)
             setTopRight(false)
             setBottomRight(true)
             setBottomLeft(false)
             setX(550)
+            localStorage.setItem('xPoistion', 550)
             setY(400)
+            localStorage.setItem('yPoistion', 400)
         }
     }
     return(

@@ -12,22 +12,28 @@ const ClickableBox = ({ x, y, setX, setY, onClick, onDoubleClick }) => {
         console.info("x-", dragElement.x, " y-", dragElement.y)
         if (dragElement.x >= 0 && dragElement.x<= 550){
             setX(dragElement.x);
+            localStorage.setItem('xPoistion', dragElement.x)
         } else if (dragElement.x <0){
             setX(0)
+            localStorage.setItem('xPoistion', 0)
         } else if (dragElement.x >550){
             setX(550)
+            localStorage.setItem('xPoistion', 5500)
         }
 
         if (dragElement.y >= 0 && dragElement.y <= 400) {
             setY(dragElement.y);
+            localStorage.setItem('yPoistion', dragElement.y)
         } else if (dragElement.y < 0) {
             setY(0)
+            localStorage.setItem('yPoistion', 0)
         } else if (dragElement.y > 400) {
             setY(400)
+            localStorage.setItem('yPoistion', 400)
         }
     };
     return(
-        <Draggable onStop={handleStop} position={{ x: x, y: y }}>
+        <Draggable onStop={handleStop} position={{ x: Number(x), y: Number(y) }}>
             <div className='blackBox' onDoubleClick={handleDoubleClick}>
                 <img src={avatar} className='avatar-image' alt="avatar" />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Avatar from './components/avatar';
 import Navbar from "./components/Navbar";
 import ShowDonut from "../src/components/3dmodel";
@@ -8,6 +8,15 @@ import './App.css';
 function App() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+
+  useEffect(() => {
+    if (localStorage.getItem('xPoistion')){
+      setX(localStorage.getItem('xPoistion'))
+    }
+    if (localStorage.getItem('yPoistion')) {
+      setY(localStorage.getItem('yPoistion'))
+    }
+  }, [])
   return (
     <div className="App">
       <Routes>
